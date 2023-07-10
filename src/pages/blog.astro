@@ -2,6 +2,10 @@
 // importing global css
 import "../styles/global.css";
 const pageTitle = "Blog";
+
+// Importing  components.
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
@@ -13,11 +17,7 @@ const pageTitle = "Blog";
     <title>{pageTitle}</title>
   </head>
   <body>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about/">About</a>
-      <a href="/blog/">Blog</a>
-    </nav>
+    <Navigation />
     <h1>{pageTitle}</h1>
     <p>Here the content of blog will be rendered</p>
     <!-- As astro use File based routing the thes link will automtically link the markdown files present in pages/posts/ folder -->
@@ -26,5 +26,6 @@ const pageTitle = "Blog";
       <li><a href="/posts/post-2/">Post 2</a></li>
       <li><a href="/posts/post-3/">Post 3</a></li>
     </ul>
+    <Footer />
   </body>
 </html>
